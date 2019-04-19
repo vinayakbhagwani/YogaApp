@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.himalayabhagwani.yogademoapp.ListExercises">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorAccent"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="NAME OF EXERCISE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:id="@+id/titleExe" />
+
+    <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/titleExe"
+        android:indeterminate="false"
+        app:mpb_progressStyle="horizontal"
+        app:mpb_progressBackgroundTint="@color/pink"
+        app:mpb_progressTint="@color/indigo"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/boat_pose"
+        android:layout_below="@+id/titleExe"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="80dp"
+        android:id="@+id/imgExe" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/layout_get_ready"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/txtGetReady"
+            android:text="GET READY"
+            android:textColor="#ff4511"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="33sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:id="@+id/txtCountDown"
+            android:text="5"
+            android:textColor="#000000"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:layout_margin="8dp"
+        android:text="START"
+        android:textColor="@color/colorAccent"
+        android:textSize="21sp"
+        android:id="@+id/btnStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:layout_above="@+id/btnStart"
+        android:layout_centerInParent="true"
+        android:textSize="37sp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/timer" />
+
+</RelativeLayout>
+
+

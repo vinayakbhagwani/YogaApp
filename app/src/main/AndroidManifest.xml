@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.himalayabhagwani.yogademoapp">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/yoga_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ListExercises" />
+        <activity android:name=".ViewExercise" />
+        <activity android:name=".SettingPage" />
+
+        <receiver
+            android:name=".AlarmNotificationReceiver"
+            android:process=":remote" />
+
+        <activity android:name=".DailyTraining" />
+        <activity android:name=".Calendar"></activity>
+
+        <service android:enabled="true" android:name=".BackgroundSoundService" />
+    </application>
+
+</manifest>
